@@ -84,7 +84,7 @@ def send_email(content_html):
 
 current_day = datetime.now().day - 1 
 while True:
-    # Checks for new jobs by 9 AM every day
+    # Checks for new jobs sometime around 9 AM every day
     if (now := datetime.now()).day != current_day:
         if now.hour == 9:
             jobs = scrape_remoteok()
